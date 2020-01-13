@@ -2,7 +2,7 @@
 FROM jenkins/jenkins:2.176.1
 
 RUN mkdir $JENKINS_HOME/casc_configs
-COPY ../casc_configs/jenkins.yaml $JENKINS_HOME/casc_configs/jenkins.yaml
+COPY casc_configs/jenkins.yaml $JENKINS_HOME/casc_configs/jenkins.yaml
 ENV CASC_JENKINS_CONFIG=$JENKINS_HOME/casc_configs
 
 ENV JAVA_OPTS=-Djenkins.install.runSetupWizard=false
